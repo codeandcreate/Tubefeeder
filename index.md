@@ -2,16 +2,9 @@
 A Youtube-Client made for the Pinephone
 
 # Screenshots
-<table>
-  <tr>
-    <td>
-      <img src="https://github.com/Schmiddiii/Tubefeeder/blob/master/screenshots/tubefeeder_screenshot_feed.png?raw=true" alt="Feed" width="400"/>
-    </td>
-    <td>
-      <img src="https://github.com/Schmiddiii/Tubefeeder/blob/master/screenshots/tubefeeder_screenshot_subscriptions.png?raw=true" alt="Subscriptions" width="400"/>
-    </td>
-  <tr>
-</table>
+
+<img src="https://github.com/Schmiddiii/Tubefeeder/blob/master/screenshots/tubefeeder_screenshot_feed.png?raw=true" alt="Feed" width="400"/>
+<img src="https://github.com/Schmiddiii/Tubefeeder/blob/master/screenshots/tubefeeder_screenshot_subscriptions.png?raw=true" alt="Subscriptions" width="400"/>
 
 # WARNING: This is still in in alpha, but should work
 
