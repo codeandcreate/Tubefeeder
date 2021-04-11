@@ -1,36 +1,18 @@
-# Tubefeeder
-A Youtube-Client made for the Pinephone
+# Tubefeeder for the MNT Reform
+[Tubefeeder](https://github.com/Schmiddiii/Tubefeeder) optimized for general desktop usage
 
-# Screenshots
-<table>
-  <tr>
-    <td>
-      <img src="/screenshots/tubefeeder_screenshot_feed.png" alt="Feed" width="400"/>
-    </td>
-    <td>
-      <img src="/screenshots/tubefeeder_screenshot_watch_later.png" alt="Feed" width="400"/>
-    </td>
-    <td>
-      <img src="/screenshots/tubefeeder_screenshot_filters.png" alt="Feed" width="400"/>
-    </td>
-    <td>
-      <img src="/screenshots/tubefeeder_screenshot_subscriptions.png" alt="Subscriptions" width="400"/>
-    </td>
-    <tr>
-</table>
+# Screenshot
+![Tubefeeder on MNT Reform](screenshots/tubefeeder_reform.png)
+GTK3 Theme: [XFCE Colour](https://www.pling.com/p/1276216)
 
-# What it can do
-- Show the feed of your subscribed channels
-- Play the video with mpv when clicking the feed item
-- Subscribe to a channel in the app
-- Filtering out unwanted videos in the feed
-- A watch-later list
+# Compile
+1. Install cargo, rustcc, libhandy-1-dev,... - if something is missing cargo bitches
+2. Enter ```cargo build --release```
+3. Your build can be found in target/release
 
-# What it cannot do (yet)
-Tell me what features you want to be included by opening an [issue](https://github.com/Schmiddiii/Tubefeeder/issues).
+# Install
+1. Place tubefeeder in ~/.local/bin/ or ~/bin (found in Releases)
+2. Place tubefeeder.desktop in ~/.local/share/applications
+3. Have fun :)
 
-# What it (probably) will never be able to do
-- Play videos in the application
-
-# Wiki
-Please also take a look at the projects wiki if you have any problems (e.g. MPV being slow) or don't know how to do something (e.g. subscribing to a channel)
+Please checkout the [original repository](https://github.com/Schmiddiii/Tubefeeder) for more informations.--

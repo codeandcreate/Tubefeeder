@@ -133,36 +133,49 @@ impl Widget for FeedListItem {
                 #[name="thumbnail"]
                 Thumbnail(self.model.entry.media.thumbnail.clone()),
 
-                #[name="box_info"]
-                gtk::Box {
-                    orientation: Orientation::Vertical,
-                    spacing: 4,
+				#[name="box_content_inner"]
+				gtk::Box {
+					orientation: Orientation::Vertical,
+		            spacing: 8,
+					
+		            #[name="box_info"]
+		            gtk::Box {
+		                orientation: Orientation::Vertical,
+		                spacing: 4,
 
-                    #[name="label_title"]
-                    gtk::Label {
-                        text: &self.model.entry.title,
-                        ellipsize: EllipsizeMode::End,
-                        property_wrap: true,
-                        property_wrap_mode: WrapMode::Word,
-                        lines: 2,
-                        justify: Justification::Left,
-                    },
-                    #[name="label_author"]
-                    gtk::Label {
-                        text: &self.model.entry.author.name,
-                        ellipsize: EllipsizeMode::End,
-                        property_wrap: true,
-                        property_wrap_mode: WrapMode::Word,
-                        halign: Align::Start
-                    },
-                    #[name="label_date"]
-                    DateLabel(self.model.entry.published.clone()) {}
-                },
-                #[name="button_watch_later"]
-                gtk::Button {
-                    clicked => FeedListItemMsg::WatchLater,
-                    image: Some(&gtk::Image::from_icon_name(Some("appointment-soon"), gtk::IconSize::LargeToolbar)),
-                }
+		                #[name="label_title"]
+		                gtk::Label {
+		                    text: &self.model.entry.title,
+		                    ellipsize: EllipsizeMode::End,
+		                    property_wrap: true,
+		                    property_wrap_mode: WrapMode::Word,
+		                    lines: 1,
+		                    halign: Align::Start,
+		                    justify: Justification::Left,
+		                },
+		                #[name="label_author"]
+		                gtk::Label {
+		                    text: &self.model.entry.author.name,
+		                    ellipsize: EllipsizeMode::End,
+		                    property_wrap: true,
+		                    property_wrap_mode: WrapMode::Word,
+		                    halign: Align::Start
+		                },
+		                #[name="label_date"]
+		                DateLabel(self.model.entry.published.clone()) {}
+		            },
+		            
+					#[name="box_buttons"]
+					gtk::Box {
+						orientation: Orientation::Horizontal,
+						
+				        #[name="button_watch_later"]
+				        gtk::Button {
+				            clicked => FeedListItemMsg::WatchLater,
+				            image: Some(&gtk::Image::from_icon_name(Some("appointment-soon"), gtk::IconSize::LargeToolbar))
+				        }
+		            }
+				}
             }
         }
     }

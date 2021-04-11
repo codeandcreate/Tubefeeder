@@ -19,7 +19,7 @@ use relm::{Relm, StreamHandle, Widget};
 use relm_derive::{widget, Msg};
 
 /// The ration between the fonts of the title and the channel/date.
-pub const FONT_RATIO: f32 = 2.0 / 3.0;
+pub const FONT_RATIO: f32 = 0.75;
 
 pub fn get_font_size() -> i32 {
     gtk::Settings::get_default()

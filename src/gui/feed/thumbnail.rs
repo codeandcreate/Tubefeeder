@@ -71,7 +71,7 @@ impl Widget for Thumbnail {
         let glib_bytes = glib::Bytes::from(&bytes.to_vec());
         let stream = MemoryInputStream::from_bytes(&glib_bytes);
         let pixbuf =
-            Pixbuf::from_stream_at_scale(&stream, 120, 90, true, NONE_CANCELLABLE).unwrap();
+            Pixbuf::from_stream_at_scale(&stream, 240, 180, true, NONE_CANCELLABLE).unwrap();
         let image = Image::from_pixbuf(Some(&pixbuf));
 
         image_box.add(&image);
